@@ -1,0 +1,146 @@
+{
+    "platforms": [
+        {
+            "x": 0,
+            "y": 620,
+            "width": 500,
+            "height": 150,
+            "img": "./../image-assets/dirt.jpg",
+            "friction": 1,
+            "bounce": 1,
+            "repeat": true,
+            "size": 50
+        },
+        {
+            "x": 750,
+            "y": 450,
+            "width": 300,
+            "height": 150,
+            "img": "./../image-assets/stone.jpg",
+            "friction": 1,
+            "bounce": 0.5,
+            "repeat": true,
+            "size": 50
+        }
+    ],
+    "background": [
+        {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080,
+            "img": "./../image-assets/sky.jpg",
+            "speed": 1
+        },
+        {
+            "x": 300,
+            "y": 370,
+            "width": 200,
+            "height": 150,
+            "img": "./../scene-object/tree.png",
+            "speed": 1
+        }
+    ],
+    "enemies": [
+        {
+            "name": "boss",
+            "x": 950,
+            "y": 450,
+            "width": 100,
+            "height": 200,
+            "color": "green",
+            "speed": 2,
+            "img": "./../players/enemy/pusher-2.png",
+            "shootInterval": 1000,
+            "lives": 1,
+            "projectile": {
+                "img": "./../players-assets/pallina.png",
+                "speed": 5,
+                "damage": 1
+            },
+            "enemyDefeatedAudio": "./../sound-effect/enemy-down.mp3",
+            "hitImgSrc": "./../players-assets/shooter.png",
+            "hitDuration": 500,
+            "canShoot": true,
+            "bulletImg": "./../players-assets/pallina.png",
+            "damage": 1,
+            "dropCollectible": [
+                {
+                    "name": "joint",
+                    "x": 1000,
+                    "y": 550,
+                    "width": 50,
+                    "height": 50,
+                    "color": "blue",
+                    "effect": {
+                        "bulletsImg": "./../players-assets/fireballs.gif",
+                        "bulletDamage": 1,
+                        "bulletSize": 40,
+                        "playerImg": "./../players/real-2/osas-sayan.png",
+                        "duration": 5000
+                    },
+
+                    "img": "./../players-assets/joint.png",
+                    "audio": "./../sound-effect/e-mi-drogo.mp3"
+                }
+            ]
+        }
+    ],
+    "collectibles": [
+        {
+            "name": "joint",
+            "x": 1200,
+            "y": 300,
+            "width": 50,
+            "height": 50,
+            "effect": {
+                "playerImg": "./../players/real-2/osas-sayan.png",
+                "duration": 5000
+            },
+            "img": "./../players-assets/joint.png",
+            "audio": "./../sound-effect/e-mi-drogo.mp3"
+        }
+    ],
+    "player": {
+        "x": 50,
+        "y": 40,
+        "width": 60,
+        "height": 100,
+        "lives": 2,
+        "color": "green",
+        "speed": 5,
+        "gravity": 1,
+        "jump": 20,
+        "shoot": false,
+        "bulletImg": "./../players-assets/banana.png",
+        "shootInterval": 500,
+        "img": "./../players/real-2/osas-sayan.png",
+        "powerUps": {
+            "invincibility": false,
+            "shield": 0,
+            "doubleJump": false
+        },
+        "hitImgSrc": "./../players-assets/osas-swag.png",
+        "hitDuration": 1000,
+        "popup": {
+            "message": "Sotto al pontos? Ma stai scherzando?",
+            "timeout": 3000,
+            "sound": "./../sound-effect/io.mp3"
+        }
+    },
+    "sounds": {
+        "jumpDefaultAudio": "./../sound-effect/io.mp3",
+        "loseLifeDefaultAudio": "./../sound-effect/ma-stai-scherzando.mp3",
+        "gameOverDefaultAudio": "./../sound-effect/ripartiamo-da-zero.mp3",
+        "powerUpDefaultAudio": "./../sound-effect/e-mi-drogo.mp3",
+        "enemyDefeatedDefaultAudio": "./../sound-effect/enemy-down.mp3"
+    },
+    "gameConfig": {
+        "width": 1280,
+        "height": 720,
+        "difficulty": "normal",
+        "maxLives": 3,
+        "resetLevel": "./level-test.json",
+        "missionList": ["kebab, kebab2"]
+    }
+}

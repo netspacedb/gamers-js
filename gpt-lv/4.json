@@ -1,0 +1,105 @@
+{
+    "platforms": [
+        {
+            "x": 0,
+            "y": 620,
+            "width": 500,
+            "height": 150,
+            "img": "./../image-assets/metal.jpg",
+            "friction": 1.5,
+            "bounce": 1,
+            "repeat": true,
+            "size": 50
+        },
+        {
+            "x": 800,
+            "y": 450,
+            "width": 300,
+            "height": 150,
+            "img": "./../image-assets/metal.jpg",
+            "speed": 1
+        }
+    ],
+    "background": [
+        {
+            "x": 0,
+            "y": 250,
+            "width": 100,
+            "height": 100,
+            "img": "./../image-assets/metallic.jpg",
+            "speed": 1
+        }
+       
+    ],
+    "enemies": [
+        {
+            "name": "robot",
+            "x": 950,
+            "y": 450,
+            "width": 100,
+            "height": 200,
+            "img": "./../players/enemy/robot.png",
+            "lives": 5,
+            "canShoot": true,
+            "bulletImg": "./../players-assets/laser.jpg",
+            "damage": 3
+        }
+    ],
+    "collectibles": [
+        {
+            "name": "armatura",
+            "x": 1350,
+            "y": 200,
+            "width": 50,
+            "height": 50,
+            "effect": {
+                "playerImg": "./../players/real-2/osas-stark.png",
+                "duration": false
+            },
+            "img": "./../players-assets/armatura.png",
+            "audio": "./../sound-effect/sono-ragazzo-africano.mp3"
+        }
+    ],
+    "player": {
+        "x": 50,
+        "y": 40,
+        "width": 60,
+        "height": 100,
+        "lives": 2,
+        "color": "green",
+        "speed": 5,
+        "gravity": 1,
+        "jump": 20,
+        "shoot": false,
+        "bulletImg": "./../players-assets/banana.png",
+        "shootInterval": 500,
+        "img": "./../players/real-2/osas-normale.png",
+        "powerUps": {
+            "invincibility": false,
+            "shield": 0,
+            "doubleJump": false
+        },
+        "hitImgSrc": "./../players-assets/osas-swag.png",
+        "hitDuration": 1000,
+        "popup": {
+            "message": "Sotto al pontos? Ma stai scherzando?",
+            "timeout": 3000,
+            "sound": "./../sound-effect/io.mp3"
+        }
+    },
+    "sounds": {
+        "jumpDefaultAudio": "./../sound-effect/io.mp3",
+        "loseLifeDefaultAudio": "./../sound-effect/ma-stai-scherzando.mp3",
+        "gameOverDefaultAudio": "./../sound-effect/ripartiamo-da-zero.mp3",
+        "powerUpDefaultAudio": "./../sound-effect/e-mi-drogo.mp3",
+        "enemyDefeatedDefaultAudio": "./../sound-effect/enemy-down.mp3"
+    },
+    "gameConfig": {
+        "width": 1280,
+        "height": 720,
+        "difficulty": "normal",
+        "maxLives": 3,
+        "resetLevel": "./level-test.json",
+        "missionList": ["kebab, kebab2"]
+    }
+}

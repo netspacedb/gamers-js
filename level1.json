@@ -1,0 +1,81 @@
+{
+    "platforms":[
+        {
+            "x": 60,
+            "y": 700,
+            "width": 1280,
+            "height": 100,
+            "img": "./../image-assets/dirt.jpg"
+        },
+        {
+            "x": 100,
+            "y": 550,
+            "width": 100,
+            "height": 50,
+            "img": "./../image-assets/grass.jpg"
+        },
+        {
+            "x": 200,
+            "y": 450,
+            "width": 100,
+            "height": 50,
+            "img": "./../image-assets/grass.jpg"
+        },
+        {
+            "x": 300,
+            "y": 350,
+            "width": 100,
+            "height": 50,
+            "img": "./../image-assets/grass.jpg"
+        }
+    ],
+    "background": [
+        {
+            "x": 60,
+            "y": 700,
+            "width": 1280,
+            "height": 720,
+            "img": "./../image-assets/sky.jpg"
+        }
+    ],
+    "enemies": [
+        {
+            "x": 600,
+            "y": 600,
+            "width": 50,
+            "height": 100,
+            "color": "green",
+            "speed": 2,
+            "img": "./../players/enemy/pusher.png",
+            "shootInterval": 2000
+        }
+    ],
+    "collectibles": [
+        {
+            "x": 300,
+            "y": 300,
+            "width": 50,
+            "height": 50,
+            "color": "red",
+            "effect": "score",
+            "img": "./../players-assets/occhiali.png"
+        }
+    ],
+    "player": {
+        "x": 50,
+        "y": 40,
+        "width": 50,
+        "height": 100,
+        "lives": 3,
+        "color": "green",
+        "speed": 5,
+        "gravity": 1,
+        "jump": 20,
+        "shootInterval": 1,
+        "img": "./../players/real/osas-super-sayan.png"
+    },
+    "gameConfig": {
+        "width": 1280,
+        "height": 720
+    }
+}

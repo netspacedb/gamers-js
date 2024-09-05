@@ -1,0 +1,75 @@
+NOTE
+
+Logiche:
+1. Mostrare le immagini dei collectionable raccolti vicino alle vite disponibili
+2. Il player non può oltrepassare le platform quindi se collide sotto di esso o di fianco il player si ferma, vale anche nel salto creando così un effetto muro
+3. Se il player tutte le vite il livello viene resettato in funzione dell "resetLevel" nell'array json 
+4. Mostra i collectionable raccolti vicino alla vita
+
+Aggiornamento logiche per JSON:
+- Prevedere un'immagine da mostrare al posto del nemico quando viene colpito per X secondi
+- Prevedere un'immagine da mostrare dietro al player quando il player viene colpito per X secondi 
+- Prevedere che ⁠alla morte di un nemico venga generato un collectionable se presente nel suo array nella sua posizione x,y (il collectionable droppato ha le proprietà di un collectionable)
+- Aggiungere una proprietà ai platform che possono far morire il player o rimuovere x Vite alla collisione
+- Un platform può caricare un nuovo livello quindi specificare la path dell'array json da caricare quando il player ci collide
+
+
+________________________________________________________________________________________________________________________________
+
+BOZZA: Property da implementare nell'array JSON e funzionalità:
+
+1. Il player o i nemici possono sparare o meno in funzione della sua property "shoot" se è false allora non possono sparare se true invece si
+2. Quando il player muore tutta la scena viene resetta e il gioco viene riavviato da zero come all'inizio 
+3. Quando un nemico muore può lasciare al suo posto un collectibles nella scena se specificato nel suo array 
+4. Il parametro damage sull'enemy o il player stabilisce quanto danno causano se collisi e sparano, se è uguale a 0 non causano danno
+5. Un collectable se ha property "shoot" uguale a true significa che il player una volta colliso con esso verrà modificata la property del player che dal quel momento potrà sparare. PS: nel collectable può essere anche definito il suo "shootInterval".
+
+
+MIGLIORAMENTI
+Mostrare un popup di dialogo:
+La property "dialog": { text: "testo da mostrare", dialogRange: "100", timeout: 4000, when: collided || died || shooted } rappresentano il testo da mostrare sopra l'enemy o il collectable o il player, la distanza minima che deve avere il player da essi per mostrarsi e il tempo per cui deve mostrarsi prima di fadeOut 
+Le platform devono fare effetto muro (non possono essere oltrepassate in alcuno modo ma solo camminarci sopra)
+
+________________________________________________________________________________________________________________________________
+
+TECNICO:
+
+Specifiche delle Features da Implementare
+
+
+Abilità di Sparare
+
+Oggetti: Player e nemici.
+Proprietà JSON: shoot
+Se shoot è impostato su false, l'oggetto non può sparare.
+Se shoot è impostato su true, l'oggetto può sparare.
+Reset della Scena alla Morte del Giocatore
+
+Quando il giocatore muore, l'intera scena deve essere resettata e il gioco deve ripartire dall'inizio come se fosse la prima volta.
+Collezionabili Lasciati dai Nemici
+
+Quando un nemico muore, può lasciare un oggetto collezionabile (collectible) nella scena.
+La decisione se un nemico deve lasciare un collezionabile è definita nel suo array di proprietà.
+Danno Causato da Nemici e Giocatore
+
+Proprietà JSON: damage
+Determina quanto danno l'oggetto può infliggere quando collidi o spari.
+Se damage è 0, l'oggetto non infligge danno.
+Effetto dei Collezionabili sulla Capacità di Sparare del Giocatore
+
+Se un collezionabile ha la proprietà shoot impostata su true, quando il giocatore collide con esso, la proprietà shoot del giocatore viene impostata su true.
+Inoltre, il collezionabile può avere una proprietà shootInterval che determina l'intervallo di tempo tra i colpi sparati dal giocatore.
+Miglioramenti Aggiuntivi
+Popup di Dialogo
+
+Proprietà JSON: dialog
+text: Il testo da mostrare nel popup.
+dialogRange: La distanza minima tra il giocatore e l'oggetto (nemico, collezionabile, o giocatore) per attivare il popup.
+timeout: La durata in millisecondi per cui il popup deve rimanere visibile prima di scomparire.
+when: Determina quando mostrare il popup (collided, died, o shooted).
+Effetto delle Piattaforme
+
+Le piattaforme devono agire come muri: non possono essere attraversate in alcun modo, ma solo camminate sopra.
+
+
+Aggiunta comandi per mobile

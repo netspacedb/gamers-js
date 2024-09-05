@@ -1,0 +1,198 @@
+{
+    "platforms": [
+        {
+            "x": 0,
+            "y": 620,
+            "width": 620,
+            "height": 150,
+            "img": "./../image-assets/stone-2.jpg",
+            "friction": 1,
+            "bounce": 1,
+            "repeat": true,
+            "size": 50
+        }
+        ,
+        {
+            "x": 620,
+            "y": 620,
+            "width": 500,
+            "height": 150,
+            "img": "./../image-assets/stone-2.jpg",
+            "friction": 1,
+            "bounce": 1,
+            "repeat": true,
+            "size": 50
+        },
+    
+        {
+            "x": 1120,
+            "y": 620,
+            "width": 1200,
+            "height": 150,
+            "img": "./../image-assets/stone-2.jpg",
+            "friction": 1,
+            "bounce": 1,
+            "repeat": true,
+            "size": 50
+        },
+        {
+            "x": 2100,
+            "y": 620,
+            "width": 1920,
+            "height": 150,
+            "img": "./../image-assets/stone-2.jpg",
+            "friction": 1,
+            "bounce": 1,
+            "repeat": true,
+            "size": 50
+        },
+        {
+            "x": -1280,
+            "y": 0,
+            "width": 1280,
+            "height": 1280,
+            "img": "./../image-assets/metallic.jpg",
+            "friction": 2,
+            "bounce": 2
+        }
+    
+       
+    ],
+        "background": [
+            {
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1080,
+         
+                "img": "./../image-assets/sky.jpg",
+                "speed": 1
+            
+            },
+            {
+                "x": 0,
+                "y": 0,
+                "width": 2000,
+                "height": 1080,
+         
+                "img": "./../image-assets/murazzi-test.jpg",
+                "speed": 1
+            
+            },
+       
+            {
+                "x": 100,
+                "y": 477,
+                "width": 150,
+                "height": 150,
+                "img": "./../scene-object/streetlamp.png",
+                "speed": 1
+            },
+            {
+                "x": 700,
+                "y": 477,
+                "width": 150,
+                "height": 150,
+                "img": "./../scene-object/streetlamp.png",
+                "speed": 1
+            },
+            {
+                "x": 1400,
+                "y": 477,
+                "width": 150,
+                "height": 150,
+                "img": "./../scene-object/streetlamp.png",
+                "speed": 1
+            }
+            ,
+        {
+            "x": 0,
+            "y": 870,
+            "width": 4100,
+            "height": 1200,
+            "img": "./../image-assets/water-3.jpg",
+            "speed": 1,
+            "repeat": true,
+            "size": 150
+        },
+        {
+            "x": 0,
+            "y": 770,
+            "width": 4100,
+            "height": 150,
+            "img": "./../image-assets/water-3.jpg",
+            "speed": 1,
+            "repeat": true,
+            "size": 150
+        },
+        {
+            "x": 0,
+            "y": 720,
+            "width": 4100,
+            "height": 150,
+            "img": "./../image-assets/water-3.jpg",
+            "speed": 1,
+            "repeat": true,
+            "size": 150
+        }
+        ],
+    "enemies": [
+        
+    ],
+    "collectibles": [
+        {
+            "name": "occhiali",
+            "x": 1280,
+            "y": 550,
+            "width": 50,
+            "height": 50,
+            "color": "red",
+            "effect": {
+                "playerImg": "./../players/real-2/osas-swag.png",
+                "duration": false
+            },
+            "img": "./../players-assets/occhiali.png",
+            "audio": "./../sound-effect/andate.mp3"
+        }
+    ],
+    "player": {
+        "x": 50,
+        "y": 40,
+        "width": 60,
+        "height": 100,
+        "lives": 3,
+        "color": "green",
+        "speed": 5,
+        "gravity": 1,
+        "jump": 20,
+        "shoot": false,
+        "bulletImg": "./../players-assets/banana.png",
+        "shootInterval": 500,
+        "img": "./../players/real-2/osas-normale.png",
+        "powerUps": {
+            "invincibility": false,
+            "shield": 0,
+            "doubleJump": false
+        },
+        "hitImgSrc": "./../players-assets/osas-swag.png",
+        "hitDuration": 1000
+    },
+    "sounds": {
+        "jumpDefaultAudio": "./../sound-effect/io.mp3",
+        "loseLifeDefaultAudio": "./../sound-effect/ma-stai-scherzando.mp3",
+        "gameOverDefaultAudio": "./../sound-effect/ripartiamo-da-zero.mp3",
+        "powerUpDefaultAudio": "./../sound-effect/e-mi-drogo.mp3",
+        "enemyDefeatedDefaultAudio": "./../sound-effect/enemy-down.mp3"
+    },
+    "gameConfig": {
+        "width": 2000,
+        "height": 1080,
+        "gameHeight": 2000,
+        "gameWidth": 2000,
+        "difficulty": "normal",
+        "maxLives": 3,
+        "resetLevel": "./gpt-lv/1.json",
+        "nextLevel": "./gpt-lv/2.json",
+        "nextPresentation" : ""
+    }
+}

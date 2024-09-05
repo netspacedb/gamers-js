@@ -1,0 +1,54 @@
+{
+    "platform": {
+        "x": 0,
+        "y": 300,
+        "width": 1280,
+        "height": 40,
+        "img": "./../scene-object/sotto-pontos.jpg"
+    },
+    "background": [
+        {
+            "x": 0,
+            "y": 0,
+            "width": 800,
+            "height": 600,
+            "img": "./../scene-object/sotto-pontos.jpg",
+            "speed": 0.5
+        }
+    ],
+    "player": {
+        "x": 100,
+        "y": 560,
+        "width": 40,
+        "height": 40,
+        "img": "./../players/real/osas-normale.png"
+
+    },
+    "enemies": [
+        {
+            "x": 600,
+            "y": 560,
+            "width": 40,
+            "height": 40,
+            "color": "green",
+            "speed": 2,
+            "img": "./../players/enemy/pusher.png",
+            "shootInterval": 2000
+        }
+    ],
+    "collectibles": [
+        {
+            "x": 300,
+            "y": 360,
+            "width": 20,
+            "height": 20,
+            "color": "red",
+            "effect": "score",
+            "img": "./../players-assets/joint.png"
+        }
+    ],
+    "gameConfig":{
+        "width": 1280,
+        "height": 720
+    }
+}

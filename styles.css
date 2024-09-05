@@ -1,0 +1,214 @@
+HTML{
+    overflow:hidden;
+    
+}
+body{
+
+    margin:0;
+    overflow: hidden;
+
+}
+
+[hidden]{
+    transform:scale(0) !important;
+    opacity: 0 !important;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    min-height: 50vh;
+    background-color: #00afcc;
+}
+game-scene{
+    display: flex;
+    position:relative;
+}
+
+
+game-scene[lv="1"] background {
+    content:' ';
+    position: fixed;
+    margin:0;
+    left:0;
+    top:0;
+    right: 0;
+
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 -35vh;
+    background-color: #00AFCC;
+    background-image:url('./../image-assets/pontos.png');
+    z-index: -1;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+reset-game{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1;
+    width:100%;
+    height:100%;
+    background-color:#00afcc;
+    text-align:center;
+    font-family:Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all ease 0.4s;
+    transform:scale(1);
+    opacity: 1;
+    cursor: default;
+}
+reset-game h4{
+    line-height:1;
+    margin:0;
+    font-size: 50px;
+    animation: waitUtil 2s ease, fadeIn 4s 1.5s ease; 
+    background: linear-gradient(to right, #ffc107, #ffd600, #fffe00, #ffec00, #ffb300);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #ffc107;
+    animation: waitUtil 2s ease, fadeIn 4s 1.5s ease, rainbow 6s 1.5s ease-in-out infinite;
+    background-size: 400% 100%;
+    text-shadow: unset;
+    filter: drop-shadow(0px 0px 10px rgb(0 131 153) t);
+    transform: rotateY(45deg);
+    -webkit-text-stroke: 2PX #ff4300;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+reset-game p{
+    line-height:1;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0px 1px 3px rgb(0 0 0 / 50%);
+}
+reset-game button{
+       -webkit-filter: drop-shadow(2px 4px 6px rgb(0 131 153));
+       font-family: var(--title-font);
+       font-size: 16px;
+       letter-spacing: 2px;
+       border-radius: 11px;
+       transform: skewX(-10deg);
+       background-color: #ffbf00;
+       height: fit-content;
+       background-color: #ffc107;
+       border: 1px solid #ffc107;
+       color: rgb(0, 0, 0);
+       box-shadow: 0px 5px 0px #d29d00;
+       padding: 10px 20px;
+       cursor: pointer;
+}
+reset-game button span{
+    font-weight:600;
+}
+
+
+next-game{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1;
+    width:100%;
+    height:100%;
+    background-color:#00afcc;
+    text-align:center;
+    font-family:Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all ease 0.4s;
+    transform:scale(1);
+    opacity: 1;
+    cursor: default;
+}
+next-game h4{
+    line-height:1;
+    margin:0;
+    font-size: 50px;
+    animation: waitUtil 2s ease, fadeIn 4s 1.5s ease; 
+    background: linear-gradient(to right, #ffc107, #ffd600, #fffe00, #ffec00, #ffb300);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #ffc107;
+    animation: waitUtil 2s ease, fadeIn 4s 1.5s ease, rainbow 6s 1.5s ease-in-out infinite;
+    background-size: 400% 100%;
+    text-shadow: unset;
+    filter: drop-shadow(0px 0px 10px rgb(0 131 153) t);
+    transform: rotateY(45deg);
+    -webkit-text-stroke: 2PX #ff4300;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+next-game p{
+    line-height:1;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0px 1px 3px rgb(0 0 0 / 50%);
+}
+next-game button{
+       -webkit-filter: drop-shadow(2px 4px 6px rgb(0 131 153));
+       font-family: var(--title-font);
+       font-size: 16px;
+       letter-spacing: 2px;
+       border-radius: 11px;
+       transform: skewX(-10deg);
+       background-color: #ffbf00;
+       height: fit-content;
+       background-color: #ffc107;
+       border: 1px solid #ffc107;
+       color: rgb(0, 0, 0);
+       box-shadow: 0px 5px 0px #d29d00;
+       padding: 10px 20px;
+       cursor: pointer;
+}
+next-game button span{
+    font-weight:600;
+}
+
+#presentation{
+    position:fixed;
+    top:0;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#app{
+        background: #368cf9;
+        display: flex;
+}
+
+#presentation [scene]{
+    z-index:100;
+    height: 100%;
+    padding-top:40vh;
+}
+#presentation [scene][started]{
+    display:none;
+}

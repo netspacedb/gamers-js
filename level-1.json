@@ -1,0 +1,135 @@
+{
+    "platforms": [
+        {
+            "x": 0,
+            "y": 700,
+            "width": 1920,
+            "height": 300,
+            "img": "./../image-assets/dirt.jpg",
+            "friction": 1,
+            "bounce": 1
+        }
+    ],
+        "background": [
+            {
+                "x": 0,
+                "y": 0,
+                "width": 1280,
+                "height": 720,
+                "img": "./../image-assets/sky.jpg"
+            
+            },
+            {
+                "x": 100,
+                "y": 400,
+                "width": 150,
+                "height": 200,
+                "img": "./../scene-object/tree.png"
+            },
+            {
+                "x": 700,
+                "y": 400,
+                "width": 150,
+                "height": 300,
+                "img": "./../scene-object/tree.png"
+            },
+            {
+                "x": 1050,
+                "y": 420,
+                "width": 100,
+                "height": 250,
+                "img": "./../scene-object/tree.png"
+            }
+        ],
+    "enemies": [
+       
+    ],
+    "collectibles": [
+        {
+            "name": "kebab",
+            "x": 1200,
+            "y": 620,
+            "width": 50,
+            "height": 50,
+            "color": "red",
+            "effect": {
+                "lives": 1
+            },
+            "missionObject": "kebab",
+           
+            "img": "./../players-assets/kebab.png",
+            "audio": "./../sound-effect/glielo-paghiamo.mp3"
+        },
+        {
+            "name": "kebab2",
+            "x": 1000,
+            "y": 620,
+            "width": 50,
+            "height": 50,
+            "color": "red",
+            "effect": {
+                "lives": 1
+            },
+            "missionObject": "kebab2",
+            "img": "./../players-assets/kebab.png",
+            "audio": "./../sound-effect/glielo-paghiamo.mp3"
+        },
+        {
+            "name": "bandiera",
+            "x": 1280,
+            "y": 602,
+            "width": 65,
+            "height": 100,
+            "color": "red",
+            "effect": {
+                "playerImg": "./../players/real-2/osas-winner.png"
+            },
+            "missionObject": "kebab2",
+            "img": "./../players-assets/bandiera.png",
+            "audio": "./../sound-effect/io-dormi-nella-stazione.mp3",
+            "loadLevel": "./level-2.json"
+        }
+    ],
+    "player": {
+        "x": 50,
+        "y": 40,
+        "width": 60,
+        "height": 100,
+        "lives": 2,
+        "color": "green",
+        "speed": 5,
+        "gravity": 1,
+        "jump": 20,
+        "shoot": false,
+        "bulletImg": "./../players-assets/banana.png",
+        "shootInterval": 500,
+        "img": "./../players/real-2/osas-normale.png",
+        "powerUps": {
+            "invincibility": false,
+            "shield": 0,
+            "doubleJump": false
+        },
+        "hitImgSrc": "./../players-assets/osas-swag.png",
+        "hitDuration": 1000,
+        "popup": {
+            "message": "Sotto al pontos? Ma stai scherzando?",
+            "timeout": 3000,
+            "sound": "./../sound-effect/io.mp3"
+        }
+    },
+    "sounds": {
+        "jumpDefaultAudio": "./../sound-effect/io.mp3",
+        "loseLifeDefaultAudio": "./../sound-effect/ma-stai-scherzando.mp3",
+        "gameOverDefaultAudio": "./../sound-effect/ripartiamo-da-zero.mp3",
+        "powerUpDefaultAudio": "./../sound-effect/e-mi-drogo.mp3",
+        "enemyDefeatedDefaultAudio": "./../sound-effect/enemy-down.mp3"
+    },
+    "gameConfig": {
+        "width": 1280,
+        "height": 720,
+        "difficulty": "normal",
+        "maxLives": 3,
+        "resetLevel": "./level-test.json",
+        "missionList": ["kebab, kebab2"]
+    }
+}
