@@ -1,7 +1,7 @@
 
 <body>
     <header>
-        <h1>Documentazione per la Classe Game JS</h1>
+        <h1>GAMERS JS - Game generator With Json</h1>
     </header>
     <div class="container">
         <nav class="index">
